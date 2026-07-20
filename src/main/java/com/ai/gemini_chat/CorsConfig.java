@@ -13,7 +13,10 @@ public class CorsConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
 
         registry.addMapping("/api/qna/**")
-                .allowedOrigins("http://localhost:5174/")
+                .allowedOrigins(
+                        "http://localhost:5174",
+                        "https://ai-qna-frontend-rc8pw54co-darshan520s-projects.vercel.app"
+                )
                 .allowedMethods(
                         "GET",
                         "POST",
